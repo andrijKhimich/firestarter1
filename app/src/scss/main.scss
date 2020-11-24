@@ -1,0 +1,22 @@
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+// libs using in project, uncoment what you need
+@import "../../node_modules/normalize.css/normalize.css";
+@import "../../node_modules/bootstrap-4-grid/scss/grid.scss";
+// @import "../../node_modules/slick-carousel/slick/slick.scss";
+
+
+// base styles for project
+@import "base/fonts";
+@import "base/base";
+@import "base/animations";
+@import "base/sprite-svg";
+
+// project components
+@import "components/header";
+@import "components/slick";
+@import "components/footer";
+
+// project pages
+@import "pages/index";

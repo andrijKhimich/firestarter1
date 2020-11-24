@@ -1,0 +1,228 @@
+// header styles
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid $borderColor;
+  z-index: 10;
+
+  @include d(991) {
+    padding: 15px 0;
+  }
+
+  &-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include d(991) {
+      justify-content: flex-start;
+    }
+
+    .btn {
+      margin-right: 30px;
+
+      @include d(991) {
+        margin-left: 20px;
+      }
+
+      @include d(575) {
+        margin-left: auto;
+      }
+    }
+
+  }
+}
+
+.logo {
+  max-width: 197px;
+  position: relative;
+  z-index: 11;
+
+  @include d(1199) {
+    max-width: 150px;
+  }
+  
+  @include d(380) {
+    max-width: 100px;
+  }
+}
+
+.phone {
+  letter-spacing: .08em;
+  margin-right: 26px;
+
+  @include d(991) {
+    margin-left: auto;
+  }
+
+  @include d(575) {
+    display: none;
+  }
+}
+
+.nav {
+  margin-right: 35px;
+  margin-left: auto;
+
+  @include d(991) {
+    position: fixed;
+    top: -20px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $white;
+    padding-top: 100px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .4s ease, top .4s ease;
+
+    &.open {
+      opacity: 1;
+      pointer-events: initial;
+      top: 0;
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+
+    @include d(991) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    li {
+      font-weight: 400;
+      padding: 57px 34px;
+
+      @include d(1199) {
+        padding: 30px 20px;
+      }
+
+      @include d(991) {
+        text-align: left;
+        font-size: 18px;
+        padding: 20px;
+      }
+
+      &:not(:last-child) {
+        border-left: 1px solid $borderColor;
+
+        @include d(991) {
+          border: none;
+        }
+      }
+
+      &:not(:first-child) {
+        border-right: 1px solid $borderColor;
+
+        @include d(991) {
+          border: none;
+        }
+      }
+
+      a {
+        transition: color .4s ease;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+}
+
+.humburger {
+  width: 30px;
+  height: 20px;
+  flex: 0 0 30px;
+  position: relative;
+  border: none;
+  background-color: transparent;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  display: none;
+  z-index: 10;
+
+  @include d(991) {
+    display: inline-block;
+  }
+
+  & span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 50%;
+    background-color: $primary;
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+
+  & span:nth-child(even) {
+    left: 50%;
+  }
+
+  & span:nth-child(odd) {
+    left: 0px;
+  }
+
+  & span:nth-child(1),
+  & span:nth-child(2) {
+    top: 0px;
+  }
+
+  & span:nth-child(3),
+  & span:nth-child(4) {
+    top: 50%;
+  }
+
+  & span:nth-child(5),
+  & span:nth-child(6) {
+    top: 100%;
+  }
+
+  &.open span:nth-child(1),
+  &.open span:nth-child(6) {
+    transform: rotate(45deg);
+  }
+
+  &.open span:nth-child(2),
+  &.open span:nth-child(5) {
+    transform: rotate(-45deg);
+  }
+
+  &.open span:nth-child(1) {
+    left: 5px;
+    top: 10px;
+  }
+
+  &.open span:nth-child(2) {
+    left: calc(50% - 5px);
+    top: 10px;
+  }
+
+  &.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0;
+  }
+
+  &.open span:nth-child(4) {
+    left: 100%;
+    opacity: 0;
+  }
+
+  &.open span:nth-child(5) {
+    left: 5px;
+    top: 15px;
+  }
+
+  &.open span:nth-child(6) {
+    left: calc(50% - 5px);
+    top: 15px;
+  }
+}

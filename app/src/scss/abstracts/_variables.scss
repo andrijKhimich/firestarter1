@@ -1,0 +1,14 @@
+// project colors
+$white: #ffffff;
+$black: #000000;
+$textColor: $black;
+$primary: #E0644B;
+$primaryDark: #b3503c;
+$gray: #c4c4c4;
+$grayLight: rgba($black, .1);
+$borderColor: rgba($white, .2);
+
+// timing
+$hover-duration: .4s;
+$duration: .8s;
+$timing: cubic-bezier(.7, 0, .3, 1);

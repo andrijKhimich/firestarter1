@@ -1,0 +1,28 @@
+// footer styles
+.footer {
+  padding: 25px 0;
+  border-top: 1px solid $grayLight;
+  font-weight: 400;
+
+  @include d(575) {
+    font-size: 12px;
+  }
+
+  &-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    a {
+      padding: 0 40px;
+
+      @include d(575) {
+        padding: 0;
+      }
+
+      @include d(400) {
+        display: none;
+      }
+    }
+  }
+}
