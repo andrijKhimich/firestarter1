@@ -6,7 +6,7 @@
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
-      width: 100%;
+  width: 100%;
 }
 
 /* Лента слайдов */
@@ -41,8 +41,40 @@
 .slick-arrow.slick-disabled {}
 
 /* Точки */
-.slick-dots {}
+.slick-dots {
+  position: absolute;
+  top: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  // margin: 10px 0;
+}
 
-.slick-dots li {}
+.slick-dots li {
+  width: 8px;
+  height: 8px;
 
-.slick-dots button {}
+  &:not(:last-child) {
+    margin-right: 5px;
+  }
+
+  &.slick-active {
+    button {
+      background-color: $primary;
+    }
+
+  }
+}
+
+.slick-dots button {
+  width: 6px;
+  height: 6px;
+  font-size: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $gray;
+  border: none;
+  border-radius: 50%;
+}
