@@ -13,7 +13,8 @@
   @include d(991) {
     padding: 80px 0 0 0;
   }
-   @include d(767) {
+
+  @include d(767) {
     padding: 60px 0 0 0;
   }
 }
@@ -27,6 +28,14 @@
   display: flex;
   align-items: center;
   margin: 100px 0 50px 0;
+
+  @include d(1199) {
+    margin: 80px 0 50px;
+  }
+
+  @include d(991) {
+    margin: 60px 0 50px 0;
+  }
 
   li {
     width: 92px;
@@ -330,13 +339,14 @@
 }
 
 .banner {
-  height: 402px;
+  // height: 402px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   filter: grayscale(1);
   position: relative;
-
+  padding-bottom: 28%;
+  min-height: 150px;
   &:before {
     content: "";
     position: absolute;
