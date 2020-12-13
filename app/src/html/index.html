@@ -409,38 +409,40 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-8 offset-lg-4">
-                <form class="contacts-form">
+                <div class="contacts-form">
                   <h3 class="title-3">Sign up for a FREE consultation</h3>
-                  <div class="contacts-form__row">
-                    <div class="contacts-form__group">
-                      <input type="text" id="contactFullName" class="contacts-form__input" placeholder="Your Full Name"
-                        autocomplete="off">
-                      <label for="contactFullName" class="contacts-form__label">Your Full Name</label>
-                      <span class="error-message">This field is requered!</span>
+                  <form>
+                    <div class="contacts-form__row">
+                      <div class="contacts-form__group">
+                        <input type="text" id="contactFullName" class="contacts-form__input"
+                          placeholder="Your Full Name" autocomplete="off">
+                        <label for="contactFullName" class="contacts-form__label">Your Full Name</label>
+                        <span class="error-message">This field is requered!</span>
+                      </div>
+                      <div class="contacts-form__group">
+                        <input type="text" id="contactPhoneNunber" class="contacts-form__input"
+                          placeholder="Phone Number" autocomplete="off">
+                        <label for="contactPhoneNunber" class="contacts-form__label">Phone Number</label>
+                        <span class="error-message">This field is requered!</span>
+                      </div>
                     </div>
-                    <div class="contacts-form__group">
-                      <input type="text" id="contactPhoneNunber" class="contacts-form__input" placeholder="Phone Number"
-                        autocomplete="off">
-                      <label for="contactPhoneNunber" class="contacts-form__label">Phone Number</label>
-                      <span class="error-message">This field is requered!</span>
+                    <div class="contacts-form__row">
+                      <div class="contacts-form__group">
+                        <input type="email" id="contactEmail" class="contacts-form__input" placeholder="Email Address"
+                          autocomplete="off">
+                        <label for="contactEmail" class="contacts-form__label">Email Address</label>
+                        <span class="error-message">This field is requered!</span>
+                      </div>
+                      <div class="contacts-form__group">
+                        <input type="text" id="contactComapanyName" class="contacts-form__input"
+                          placeholder="Your Company Name" autocomplete="off">
+                        <label for="contactComapanyName" class="contacts-form__label">Your Company Name</label>
+                        <span class="error-message">This field is requered!</span>
+                      </div>
                     </div>
-                  </div>
-                  <div class="contacts-form__row">
-                    <div class="contacts-form__group">
-                      <input type="email" id="contactEmail" class="contacts-form__input" placeholder="Email Address"
-                        autocomplete="off">
-                      <label for="contactEmail" class="contacts-form__label">Email Address</label>
-                      <span class="error-message">This field is requered!</span>
-                    </div>
-                    <div class="contacts-form__group">
-                      <input type="text" id="contactComapanyName" class="contacts-form__input"
-                        placeholder="Your Company Name" autocomplete="off">
-                      <label for="contactComapanyName" class="contacts-form__label">Your Company Name</label>
-                      <span class="error-message">This field is requered!</span>
-                    </div>
-                  </div>
-                  <button class="btn" type="submit">Send the message</button>
-                </form>
+                    <button class="btn" type="submit">Send the message</button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>

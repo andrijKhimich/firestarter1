@@ -77,12 +77,6 @@
     &:last-of-type {
       margin-bottom: 25px;
     }
-
-    &.error {
-      .error-message {
-        opacity: 1;
-      }
-    }
   }
 
   &__input {
@@ -150,6 +144,22 @@
   font-size: 10px;
   opacity: 0;
   transition: opacity .4s ease;
+}
+
+.wpcf7-not-valid-tip {
+  position: absolute;
+  left: 10px;
+  color: tomato;
+  font-size: 10px;
+  bottom: -25px;
+}
+
+div.wpcf7 .ajax-loader {
+  display: none !important;
+}
+
+.wpcf7-response-output {
+  display: none !important;
 }
 
 .svg-icon {
@@ -347,6 +357,7 @@
   position: relative;
   padding-bottom: 28%;
   min-height: 150px;
+
   &:before {
     content: "";
     position: absolute;
@@ -356,10 +367,7 @@
     right: 0;
     background-color: $primary;
     filter: grayscale(0);
-    // mix-blend-mode: multiply;
     opacity: 0.1;
-    // filter: grayscale(1);
-
     z-index: 1;
   }
 }
@@ -525,7 +533,7 @@
       width: 120px;
       height: 115px;
 
-      picture {
+      img {
         position: absolute;
         top: 50%;
         left: 50%;
@@ -597,12 +605,6 @@
     }
   }
 
-  &__address {
-    // @include d(991) {
-    //   margin-bottom: 60px;
-    // }
-  }
-
   &-banner {
     background-size: cover;
     background-repeat: no-repeat;
@@ -655,8 +657,9 @@
 
   &__item {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     flex: 0 0 50%;
+
   }
 
   &__description {
@@ -673,7 +676,6 @@
 
   &__value {
     font-size: 14px;
-    margin-top: -3px;
   }
 }
 
@@ -720,13 +722,6 @@
 
     @include d(575) {
       flex: 0 0 100%;
-    }
-
-    &.error {
-      .error-message {
-        opacity: 1;
-        left: 30px;
-      }
     }
   }
 
